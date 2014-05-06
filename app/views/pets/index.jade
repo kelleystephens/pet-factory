@@ -1,0 +1,21 @@
+extends ../shared/template
+
+block content
+  header
+    h1.phead Pets
+
+  #controls
+      a(href='/pets/new' class='glow button button-primary' id='new') New Pet
+
+  #pets
+    each pet in pets
+      .pet
+        .name
+          a(href='/pets/#{pet._id}')= pet.name
+        .species Species: #{pet.species}
+        .gender Gender: #{pet.gender}
+        .age Age: #{pet.age}
+        img(src='/img/#{pet.photo}')
+        .delete
+          form(action='/pets/#{pet._id}/delete', method='POST')
+            button Delete

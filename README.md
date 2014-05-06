@@ -1,6 +1,4 @@
-Server Template
-===============
+Pet-Factory
+===========
 
-- Node.js
-- Express
-- MongoDB
+Making a pet factory using MongoDB & Node

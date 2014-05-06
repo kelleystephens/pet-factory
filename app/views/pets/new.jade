@@ -1,0 +1,19 @@
+extends ../shared/template
+
+block content
+  header
+    h1.phead New Pet
+
+  form(method='POST', action='/pets')
+    input(name='name' type='text' autofocus=true placeholder='Name')
+    input(name='age' type='text' placeholder='Age')
+    select(name='gender')
+      option Select Gender
+      option Male
+      option Female
+    select(name='species')
+      option Select Animal
+      option Dog
+      option Cat
+      option Bunny
+    button(class= 'button') Add
